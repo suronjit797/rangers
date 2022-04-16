@@ -1,0 +1,17 @@
+
+body{
+    background-color: #d1cde0;
+}
+.app{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
