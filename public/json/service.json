@@ -1,0 +1,76 @@
+[
+    {
+        "id": "jdkfahsdji4379847",
+        "name": "cox's bazar",
+        "duratoin": "1day 2nights",
+        "price": "5000",
+        "image": "/images/coxbazar.jpg",
+        "description": "Cox's Bazar is a city, fishing port, tourism centre, and district headquarters in southeastern Bangladesh. It is famous mostly for its long natural sandy beach. It is located 150 km south of the city of Chittagong. Cox's Bazar is also known by the name Panowa, which translates literally as 'yellow flower'.",
+        "otehrs": [
+            "breakfast",
+            "lunch",
+            "dinner",
+            "Transportation service",
+            "Hotel service",
+            "food and beverage",
+            "accomudation srvice",
+            "visit others toursit spot"
+        ]
+    },
+    {
+        "id": "243234sdr4352",
+        "name": "sylhet",
+        "duratoin": "2day 3nights",
+        "price": "5000",
+        "image": "/images/sylhet.jpg",
+        "description": "Sylhet is a metropolitan city in northeastern Bangladesh. It is the administrative seat of the Sylhet Division. Located on the north bank of the Surma River at the eastern tip of Bengal, Sylhet has a subtropical climate and lush highland terrain",
+        "otehrs": [
+            "breakfast",
+            "lunch",
+            "dinner",
+            "accomudation srvice",
+            "Transportation service",
+            "Hotel service",
+            "food and beverage",
+            "visit tea garden",
+            "communicate with local",
+            "hill tracking"
+        ]
+    },
+    {
+        "id": "sdr234qtrew5r4",
+        "name": "Bandarbans",
+        "duratoin": "2day 3nights",
+        "price": "5000",
+        "image": "/images/bandarbans.jpg",
+        "description": "Bandarban city is the headquarters of the Bandarban district. Bandarban district (4,479 km 2) is not only the most remote district of the country, but also the least populous (population 292,900). There is an army contingent at Bandarban Cantonment . Bandarban town is the hometown of the Bohmong Chief (currently King, or Raja",
+        "otehrs": [
+            "breakfast",
+            "lunch",
+            "dinner",
+            "accomudation srvice",
+            "Transportation service",
+            "Hotel service",
+            "food serviev",
+            "communicate with local",
+            "hill tracking"
+        ]
+    },
+    {
+        "id": "sadwe643qr234",
+        "name": "sundarbans",
+        "duratoin": "1day",
+        "price": "5000",
+        "image": "/images/sundarbans.jpg",
+        "description": "Sundarbans is a mangrove area in the delta formed by the confluence of the Padma, Brahmaputra and Meghna Rivers in the Bay of Bengal. It spans the area from the Baleswar River in Bangladesh's division of Khulna to the Hooghly River in India's state of West Bengal.",
+        "otehrs": [
+            "breakfast",
+            "lunch",
+            "dinner",
+            "Transportation service",
+            "food serviev",
+            "communicate with local",
+            "visit in jangals"
+        ]
+    }
+]
