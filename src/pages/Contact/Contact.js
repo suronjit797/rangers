@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
 
 import './Contact.css'
 
@@ -10,14 +11,24 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
+
+    // react tost
+    const notify = err => toast(err);
+
+
     const handelMessage = e => {
         e.preventDefault()
-        console.log({name, email, message})
+        notify(name + ' your message send successfully')
+        setName('')
+        setEmail('')
+        setMessage('')
+        console.log({ name, email, message })
     }
 
 
     return (
         <div className='container contact'>
+            <ToastContainer />
             <form onSubmit={handelMessage}>
                 <Form.Control
                     type="text"
