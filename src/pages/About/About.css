@@ -1,0 +1,16 @@
+.about{
+    margin-top: 50px;
+}
+
+.about_profile{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+.about_body{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}

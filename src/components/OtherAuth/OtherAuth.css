@@ -1,0 +1,18 @@
+.otherAuth .btn-facebook:hover{
+    background-color: transparent;
+    color: black;
+}
+
+.otherAuth .btn-facebook{
+    background-color: #395b9b;
+    color: #fff;
+}
+.otherAuth .btn-facebook:hover{
+    border-color: #395b9b;
+    color: #395b9b;
+}
+
+.otherAuth button img{
+    width: 30px;
+    margin-right: 10px;
+}

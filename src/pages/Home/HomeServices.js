@@ -19,7 +19,7 @@ const HomeServices = () => {
             </h1>
             <div className="row row-cols-md-3 align-items-stretch g-5">
                 {
-                    services.map((service, index) => index < 3 && <HomeServiceCard service={service} />)
+                    services.map((service, index) => index < 3 && <HomeServiceCard key={service.id} service={service} />)
                 }
             </div>
 

@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 import Header from './components/Header/Header'
@@ -9,6 +10,11 @@ import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import Login from './pages/Login/Login';
 import Regiester from './pages/Register/Register';
+import Blog from './pages/Blog/Blog';
+import About from './pages/About/About';
+import Checkout from './pages/Checkout/Checkout';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import Service from './pages/Service/Service';
 
 function App() {
   return (
@@ -18,6 +24,12 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Regiester />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/service' element={<RequireAuth><Service /></RequireAuth>} />
+
+        <Route path='/checkout' element={<RequireAuth> <Checkout /></RequireAuth>} />
+
 
         <Route path='*' element={<NotFound />} />
 

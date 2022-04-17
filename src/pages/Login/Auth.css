@@ -1,0 +1,17 @@
+.authFrom input:not([type="checkbox"]) {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: transparent;
+    border-radius: 50px;
+}
+
+.authFrom input:focus {
+    outline: 3px solid lightblue;
+}
+
+.authFrom button {
+    width: 100%;
+    border-radius: 50px;
+}
