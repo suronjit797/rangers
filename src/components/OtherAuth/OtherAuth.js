@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import FirebaseErrorMessage from '../FirebaseErrorMessage';
 
@@ -8,13 +8,17 @@ import './OtherAuth.css'
 import google from '../../images/google.png'
 import facebook from '../../images/facebook.png'
 import auth from '../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const OtherAuth = () => {
     const navigate = useNavigate()
+    const location = useLocation();
+
+        // previous path
+        const from = location.state?.from?.pathname || "/";
 
     // react tost
     const notify = err => toast(err);
@@ -41,7 +45,7 @@ const OtherAuth = () => {
     }
 
     if (googleUser || fbUser) {
-        navigate('/')
+        navigate(from, { replace: true })
     }
 
     const handelGoogle = () => {
