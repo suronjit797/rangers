@@ -71,3 +71,7 @@ img{
     z-index: 1;
     border-radius: 50%;
 }
+
+.text-justify{
+    text-align: justify;
+}

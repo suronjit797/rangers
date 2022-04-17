@@ -10,7 +10,7 @@ import { signOut } from 'firebase/auth';
 
 
 const Header = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
 
     const handelLogout = event => {
@@ -18,9 +18,8 @@ const Header = () => {
         signOut(auth)
     }
 
-
     return (
-        <Navbar variant="dark" expand="md" className="main_nav">
+        <Navbar bg="dark" variant="dark" expand="md" className="main_nav">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img src={logo} style={{ width: '130px' }} alt="" />
@@ -30,9 +29,9 @@ const Header = () => {
                     <Nav className="ms-auto">
                         <Nav.Link as={NavLink} to='/'>Home </Nav.Link>
                         <Nav.Link as={NavLink} to='/blog'>  Blog </Nav.Link>
-                        <Nav.Link as={NavLink} to='/service'>  Service </Nav.Link>
+                        <Nav.Link as={NavLink} to='/services'>  Service </Nav.Link>
                         <Nav.Link as={NavLink} to='/about'> About </Nav.Link>
-                        <Nav.Link as={NavLink} to='/contact'> contact </Nav.Link>
+                        <Nav.Link as={NavLink} to='/contact'> Contact </Nav.Link>
                         {
                             user ? (
                                 <Nav.Link as={NavLink} to='/login' onClick={handelLogout}> Logout </Nav.Link>

@@ -1,9 +1,4 @@
 .main_nav{
-    background-color: rgba(0, 0, 0, 0.671);
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     z-index: 10;
     

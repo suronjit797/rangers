@@ -3,9 +3,13 @@
     color: black;
 }
 
+
 .otherAuth .btn-facebook{
     background-color: #395b9b;
     color: #fff;
+    display: flex;
+    align-items: center;
+    place-content: center;
 }
 .otherAuth .btn-facebook:hover{
     border-color: #395b9b;

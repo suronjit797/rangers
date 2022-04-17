@@ -1,9 +1,12 @@
 import React from 'react';
+import ServiceBanner from './ServiceBanner';
 
 const Service = () => {
+
+
     return (
-        <div>
-            service
+        <div className='container' >
+            <ServiceBanner />
         </div>
     );
 };

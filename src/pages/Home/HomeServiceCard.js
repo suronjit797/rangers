@@ -8,8 +8,14 @@ const HomeServiceCard = ({ service }) => {
             <Card className='homeServiceCard'>
                 <Card.Img variant="top" src={service.image} />
                 <Card.Body>
-                    <Card.Title className='text-capitalize'> {service.name} </Card.Title>
-                    <Card.Text> {service.description} </Card.Text>
+                    <div className="d-flex mb-3">
+                        <Card.Title className='text-capitalize'> {service.name} </Card.Title>
+                        <Card.Title className='text-capitalize ms-auto'> ${service.price} </Card.Title>
+                    </div>
+                    <Card.Text className='text-justify'>
+                        {service.description.slice(0, 150)}
+                        {service.description.length > 150 ? <span>...<Link to={`/services/${service.id}`}> See More</Link> </span> : ''}
+                    </Card.Text> 
                 </Card.Body>
                 <Link to='/checkout' className='btn primary_btn bg-warning text-white'> <span>Proceed to checkout</span> </Link>
             </Card>

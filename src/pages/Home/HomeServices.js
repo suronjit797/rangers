@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import HomeServiceCard from './HomeServiceCard';
 
 const HomeServices = () => {
@@ -13,7 +14,7 @@ const HomeServices = () => {
 
 
     return (
-        <div>
+        <div className='mb-5'>
             <h1 className="text-center mb-5">
                 <span className='adventure_title'> Our <b> Services </b> </span>
             </h1>
@@ -23,6 +24,13 @@ const HomeServices = () => {
                 }
             </div>
 
+            {
+                services.length > 3 ? (
+                    <p className="text-center">
+                        <Link to='/services' className="btn btn-success mt-4 px-5"> See More... </Link>
+                    </p>
+                ) : ''
+            }
         </div>
     );
 };
