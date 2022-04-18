@@ -22,7 +22,7 @@ const Adventure = () => {
                             Travelling with Renger is the best way to get closer with your own planet. For more than 20 years, we provide our service to our customer and they satisfied with us.
                         </p>
 
-                        <Link to='/blogs' className='btn bg-warning text-white primary_btn'> <span> Why Travel with Ranger? </span> </Link>
+                        <Link to='/bloghom' className='btn bg-warning text-white primary_btn'> <span> Why Travel with Ranger? </span> </Link>
                     </div>
                 </div>
             </div>

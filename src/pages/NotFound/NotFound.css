@@ -1,9 +1,16 @@
 .notFound {
     position: relative;
 }
+.notFound img{
+    min-height: 400px;
+}
 
 .notFound .primary_btn {
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 10%;
+    width: 250px;
+    text-align: center;
+    margin: auto;
 }
