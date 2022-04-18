@@ -10,7 +10,7 @@ const HomeServiceCard = ({ service }) => {
                 <Card.Body>
                     <div className="d-flex mb-3">
                         <Card.Title className='text-capitalize'> {service.name} </Card.Title>
-                        <Card.Title className='text-capitalize ms-auto'> ${service.price} </Card.Title>
+                        <Card.Title className='text-capitalize ms-auto text-primary'> ${service.price} </Card.Title>
                     </div>
                     <Card.Text className='text-justify'>
                         {service.description.slice(0, 150)}

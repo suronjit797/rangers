@@ -9,7 +9,7 @@ const BlogCard = ({ index, post }) => {
                 </div>
                 <div className={`col-md-8 ${ index % 2 === 0 ? 'order-2' : 'order-1' }`}>
                     <h3 className='text-capitalize mb-3'> {post.question}?</h3>
-                    <p> {post.answer} </p>
+                    <p className='text-justify'> {post.answer} </p>
                 </div>
             </div>
         </div>

@@ -28,8 +28,9 @@ const About = () => {
                         <div>
                             <h1> Suronjit Pal </h1>
                             <h4 className='my-4'> A web developer and designer </h4>
-                            <p>
-                                I work in this section from 2019 to present. I am expert in HTML5, CSS3, JavaScript, Bootstrap, Tailwind, React, Redux, Firebase, Firebase Hooks, Axious,
+                            <p className='text-justify'>
+                                I work in this section from 2019 to present. I am expert in HTML5, CSS3, JavaScript, Bootstrap, Tailwind, React, Redux, Firebase, Firebase Hooks, Axious. 
+                                My goal is to be a fulstack web developer and make unique designn. Now I am working in Programming Hero to leanr this topic. I am quick learner so i could learn any new techonology as soon as possible. My hobby is learn new topic so day by day I improve my self. 
                             </p>
                             <div className="skill">
 
