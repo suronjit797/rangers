@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import FirebaseErrorMessage from '../../components/FirebaseErrorMessage';
 import OtherAuth from '../../components/OtherAuth/OtherAuth';
@@ -31,6 +31,8 @@ const Login = () => {
         signError,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
+
     // previous path
     const from = location.state?.from?.pathname || "/";
 
@@ -48,7 +50,20 @@ const Login = () => {
 
     }, [signError])
 
-    if (signLoading) {
+    // reset password
+    const handelForgetPassword = () => {
+        if (email) {
+            sendPasswordResetEmail(email)
+            notify('Sent email');
+        } else {
+            notify('Please provide your email')
+        }
+    }
+
+
+
+
+    if (signLoading || sending) {
         return (
             <div className='spinner_body' >
                 <Spinner animation="grow" variant="warning" />
@@ -59,6 +74,7 @@ const Login = () => {
     if (signUser) {
         navigate(from, { replace: true });
     }
+
 
 
     return (
@@ -99,6 +115,11 @@ const Login = () => {
                             Not have an account?
                             <Link to='/register'> Create now  </Link>
                         </p>
+                        <button 
+                        className="text-dark btn text-center cursor-pointer" 
+                        onClick={handelForgetPassword}
+                        disabled={!email.length}
+                        > Forget your passworrd... </button>
                         <OtherAuth />
                     </div>
                 </div>
