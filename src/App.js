@@ -29,8 +29,8 @@ function App() {
         <Route path='/register' element={<Regiester />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/services' element={<RequireAuth><Service /></RequireAuth>} >
+        <Route path='/contact' element={<RequireAuth> <Contact /> </RequireAuth>} />
+        <Route path='/services' element={<Service />} >
         </Route>
         {/* <Route path='/services/:serviceId' element={<SingleService />} /> */}
         <Route path='/services/:serviceId' element={<SingleService />} />

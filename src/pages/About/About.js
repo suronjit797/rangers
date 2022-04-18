@@ -20,11 +20,11 @@ const About = () => {
         <div className='about container'>
 
             <div className="row g-0 align-items-center my-4 align-items-stretch">
-                <div className="col md-6">
-                    <img src={user} className='about_profile h-100' alt="" />
+                <div className="col-md-6">
+                    <img src={user} className='about_profile h-100 w-100' alt="" />
                 </div>
-                <div className="col md-6">
-                    <div className="about_body  h-100">
+                <div className="col-md-6">
+                    <div className="about_body  h-100 w-100">
                         <div>
                             <h1> Suronjit Pal </h1>
                             <h4 className='my-4'> A web developer and designer </h4>

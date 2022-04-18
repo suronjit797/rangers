@@ -8,7 +8,7 @@ import './RequireAuth.css'
 
 const RequireAuth = ({ children }) => {
 
-    const [err, setErr] = useState('')  // do somthin with err
+    const [err, setErr] = useState('') 
 
 
     const [user, loading, error] = useAuthState(auth);

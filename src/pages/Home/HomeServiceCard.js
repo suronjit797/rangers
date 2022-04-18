@@ -1,8 +1,21 @@
-import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const HomeServiceCard = ({ service }) => {
+
+    const handelAddToCart = id => {
+
+        let cartItems = JSON.parse(localStorage.getItem('onCart')) || {}
+        if (cartItems[id]) {
+            cartItems[id] = cartItems[id] + 1
+        } else {
+            cartItems[id] = 1
+        }
+        localStorage.setItem('onCart', JSON.stringify(cartItems))
+    }
+
+
+
     return (
         <Col>
             <Card className='homeServiceCard'>
@@ -15,9 +28,17 @@ const HomeServiceCard = ({ service }) => {
                     <Card.Text className='text-justify'>
                         {service.description.slice(0, 150)}
                         {service.description.length > 150 ? <span>...<Link to={`/services/${service.id}`}> See More</Link> </span> : ''}
-                    </Card.Text> 
+                    </Card.Text>
                 </Card.Body>
-                <Link to='/checkout' className='btn primary_btn bg-warning text-white'> <span>Proceed to checkout</span> </Link>
+                <div className="d-flex">
+                    <Link to='/checkout' className='btn primary_btn bg-warning text-white me-1'> <span>Checkout</span> </Link>
+                    <button
+                        onClick={() => handelAddToCart(service.id)}
+                        className='btn primary_btn bg-success text-white ms-1'
+                    >
+                        <span>Add to Cart</span>
+                    </button>
+                </div>
             </Card>
         </Col>
     );

@@ -1,0 +1,11 @@
+.checkoutCard img{
+    height: 100%;
+    width: 100%;
+}
+.checkOutInput input{
+    margin-bottom: 15px;
+    width: 100%;
+    border: transparent;
+    border-bottom: 1px solid slateblue;
+    outline: transparent;
+}
