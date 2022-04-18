@@ -1,0 +1,20 @@
+.singlePost{
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.singlePost img{
+    height: 300px;
+}
+
+.singlePost .service_list{
+    list-style: none;
+}
+
+.singlePost .service_list li::before{
+    content: '\00BB';
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 1;
+    padding-right: 5px;
+}   

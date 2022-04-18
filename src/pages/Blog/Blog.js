@@ -19,20 +19,16 @@ const Blog = () => {
         setSerarchPosts(posts)
     }, [posts])
 
-    const handelSearch = event =>{
+
+
+    const handelSearch = event => {
         event.preventDefault()
-        // let ind = posts.question.toLowerCase().include(search.toLowerCase())
+        const result = posts.filter(item => (item.answer).toLowerCase().includes(search.toLowerCase()))
+        setSerarchPosts(result);
 
     }
 
-    if (!serarchPosts.length) {
-        return (
-            <div className='spinner_body' >
-                <Spinner animation="grow" variant="warning" />
-            </div>
-        );
-    }
-
+    
     return (
         <div className='container'>
             <form className='d-flex mt-4' onSubmit={handelSearch}>
@@ -42,7 +38,7 @@ const Blog = () => {
                     name="search" id="search"
                     placeholder='search your package'
                     value={search}
-                    onChange={e=>setSearch(e.target.value)}
+                    onChange={e => setSearch(e.target.value)}
                 />
                 <button className="btn btn-success"> search </button>
             </form>
@@ -50,7 +46,11 @@ const Blog = () => {
 
 
             {
-                serarchPosts.map((post, index) => <BlogCard key={post.id} index={index} post={post} />)
+                serarchPosts.length ?( 
+                    serarchPosts.map((post, index) => <BlogCard key={post.id} index={index} post={post} />)
+                    ):(
+                        <p className="text-danger text-capitalize mt-4"> no data found </p>
+                )
             }
         </div>
     );

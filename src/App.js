@@ -16,6 +16,8 @@ import Checkout from './pages/Checkout/Checkout';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Service from './pages/Service/Service';
 import Contact from './pages/Contact/Contact';
+import SingleService from './pages/SingleService/SingleService';
+
 
 function App() {
   return (
@@ -29,8 +31,10 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/services' element={<RequireAuth><Service /></RequireAuth>} >
-        <Route path=':serviceId' element={<singleService />} />
         </Route>
+        {/* <Route path='/services/:serviceId' element={<SingleService />} /> */}
+        <Route path='/services/:serviceId' element={<SingleService />} />
+
 
         <Route path='/checkout' element={<RequireAuth> <Checkout /></RequireAuth>} />
 

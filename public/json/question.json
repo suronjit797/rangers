@@ -1,20 +1,20 @@
 [
     {
+        "id": "dsalfk48534",
+        "images": "/images/auth.png",
+        "question": "Difference between authorization and authentication",
+        "answer": " Difference between authorization and authentication"
+    },
+    {
         "id": "kladjfwie7438wao",
-        "images": "/images/sundarbans.jpg",
-        "question": "question 1",
+        "images": "/images/firebase.jpg",
+        "question": "Why are you using firebase? What other options do you have to implement authentication?",
         "answer": "answer 1"
     },
     {
-        "id": "dsalfk48534",
-        "images": "/images/sundarbans.jpg",
-        "question": "question 2",
-        "answer": "answer 2"
-    },
-    {
         "id": "39uiarweoa54",
-        "images": "/images/sundarbans.jpg",
-        "question": "question 3",
+        "images": "/images/other.png",
+        "question": " What other services does firebase provide other than authentication",
         "answer": "answer 3"
     }
 ]
