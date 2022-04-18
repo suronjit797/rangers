@@ -45,10 +45,13 @@ const Login = () => {
     useEffect(() => {
         if (signError) {
             notify(FirebaseErrorMessage(signError.message))
-            console.log(signError)
         }
-
     }, [signError])
+    useEffect(() => {
+        if (resetError) {
+            notify(FirebaseErrorMessage(resetError.message))
+        }
+    }, [resetError])
 
     // reset password
     const handelForgetPassword = () => {
