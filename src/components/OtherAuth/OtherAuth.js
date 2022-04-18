@@ -24,7 +24,7 @@ const OtherAuth = () => {
     const notify = err => toast(err);
 
     // firebase hooks
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth, { sendEmailVerification: true });
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
 
     useEffect(() => {

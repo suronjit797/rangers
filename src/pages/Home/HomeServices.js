@@ -27,7 +27,7 @@ const HomeServices = () => {
             {
                 services.length > 3 ? (
                     <p className="text-center">
-                        <Link to='/services' className="btn primary_btn bg-warning mt-4 px-5 text-white">
+                        <Link to='/services' className="btn primary_btn bg-primary mt-4 px-5 text-white">
                             <span> See More... </span>
                         </Link>
                     </p>

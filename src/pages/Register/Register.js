@@ -25,7 +25,7 @@ const Regiester = () => {
         loginUser,
         loginLoading,
         loginError,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
     const [updateProfile, updating] = useUpdateProfile(auth);
 
