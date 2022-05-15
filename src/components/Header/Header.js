@@ -4,10 +4,10 @@ import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 
-import './Header.css'
 import logo from '../../images/RangerWhite.png'
 import { signOut } from 'firebase/auth';
 
+import './Header.css'
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -17,6 +17,8 @@ const Header = () => {
         event.preventDefault()
         signOut(auth)
     }
+
+    console.log(user);
 
     return (
         <Navbar bg="dark" variant="dark" expand="md" className="main_nav">
